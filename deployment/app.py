@@ -8,18 +8,23 @@ def index():
         input_text = request.form['text']
         output = predict_genres(input_text)[0]
         print(output)
-        print('the rest is')
+        print('Output of the website')
         confidence_list = output['confidences']
         labels = [ _['label'] for _ in confidence_list if _['confidence'] >= 0.5]
         label_text = ''
         for idx, label in enumerate(labels):
             label_text = label_text + label
             if idx != len(labels) - 1: label_text = label_text + ', '
-        print(label_text)
-        print(type(label_text))
-        return render_template('index.html', results=str(label_text)) 
+        if(len(label_text) == 0):
+            print("Plab B")
+            labels = [ _['label'] for _ in confidence_list if _['confidence'] >= 0.3]
+            label_text = ''
+            for idx, label in enumerate(labels):
+                label_text = label_text + label
+                if idx != len(labels) - 1: label_text = label_text + ', '
+        return render_template('index.html', results=str(label_text),show=True,initial_text = input_text) 
     else:
-        return render_template('index.html') 
+        return render_template('index.html',show=False) 
 
 def predict_genres(input_text):
     response = requests.post("https://abrar-adnan-game-classifier.hf.space/run/predict", json={
