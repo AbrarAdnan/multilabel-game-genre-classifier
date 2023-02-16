@@ -8,6 +8,11 @@ Using this dataset was highly encouraged because games are a unique form of ente
 
 The model has been deployed to [Hugging Face Spaces](https://huggingface.co/), and its API is linked to a website deployed on [Render](https://render.com/). Check out the live demo [HERE](https://multilabel-game-classifier.onrender.com)
 
+## Preview of the deployed webpage
+![webpage_demo](https://user-images.githubusercontent.com/52294804/219456382-1656158b-057b-48c5-84dd-791a93d46a71.jpg)
+
+
+
 ## Dataset Collection and Cleaning
 
 The game description and genre data were collected using [Selenium](https://selenium-python.readthedocs.io/) from [metacritic.com](https://metacritic.com) for different platforms. [metacritic.com](https://metacritic.com) has a huge database of reviews and ratings of various games of different platforms along with movies and TV series. Initially, the URLs of the games were collected from the list of games for each platform. Then, the URLs of each game were visited to retrieve their descriptions and genres. The total number of collected descriptions was 122,857. After removing duplicates or null data, the final dataset contained 91,179 rows.
