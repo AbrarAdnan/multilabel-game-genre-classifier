@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request
 import requests
 app = Flask(__name__,static_url_path='/static')
 
@@ -8,21 +8,17 @@ def index():
         input_text = request.form['text']
         output = predict_genres(input_text)[0]
         print(output)
-        print('Output of the website')
-        confidence_list = output['confidences']
-        labels = [ _['label'] for _ in confidence_list if _['confidence'] >= 0.5]
-        label_text = ''
-        for idx, label in enumerate(labels):
-            label_text = label_text + label
-            if idx != len(labels) - 1: label_text = label_text + ', '
-        if(len(label_text) == 0):
-            print("Plab B")
-            labels = [ _['label'] for _ in confidence_list if _['confidence'] >= 0.3]
-            label_text = ''
-            for idx, label in enumerate(labels):
-                label_text = label_text + label
-                if idx != len(labels) - 1: label_text = label_text + ', '
-        return render_template('index.html', results=str(label_text),show=True,initial_text = input_text) 
+        # data = [{'label': 'General', 'confidence': 0.118407034873962}, {'label': 'Action', 'confidence': 0.2966817617416382}, {'label': 'Strategy', 'confidence': 0.15596598386764526}, {'label': 'Adventure', 'confidence': 0.13903513550758362}, {'label': 'Arcade', 'confidence': 0.11551061272621155}]
+        # filtered_data = [{'label': d['label'], 'confidence': d['confidence']} for d in output['confidences'] if d['confidence'] >= 0.3]
+        filtered_data = [{'label': d['label'], 'confidence': round(d['confidence']*100, 2)} for d in output['confidences'] if d['confidence'] >= 0.3]
+        print(filtered_data)
+        if filtered_data:
+            print('result')
+            return render_template('index.html', results=filtered_data,show='result',initial_text = input_text) 
+            
+        else:
+            print('empty')
+            return render_template('index.html', results=filtered_data,show='empty',initial_text = input_text) 
     else:
         return render_template('index.html',show=False) 
 
