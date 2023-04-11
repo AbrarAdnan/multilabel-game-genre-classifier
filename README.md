@@ -2,11 +2,16 @@
 
 ## Introduction
 
-This project is a multilabel game genre classifier that takes the description of a game as input and predicts its genres. The model was fine-tuned using a BERT-base model with a dataset collected from [metacritic.com](https://metacritic.com). The dataset includes game descriptions and genres for major platforms, such as Nintendo 3DS, iOS, PC, PS4, Nintendo Switch, PS Vita, Wii-u, and Xbox One.
+This project is a multilabel game genre classifier that takes the description of a game as input and predicts its genres. The model was fine-tuned using a BERT model of base-uncased varient with a dataset collected from [metacritic.com](https://metacritic.com). The dataset includes game descriptions and genres for major platforms, such as Nintendo 3DS, iOS, PC, PS4, Nintendo Switch, PS Vita, Wii-u, and Xbox One.
 
 Using this dataset was highly encouraged because games are a unique form of entertainment and may not be the initial choice for many people compared to movies, books, or TV shows. The accuracy of the game genre classifier was around 96.4%, making it highly reliable.
 
 The model has been deployed to [Hugging Face Spaces](https://huggingface.co/), and its API is linked to a website deployed on [Render](https://render.com/). Check out the live demo [HERE](https://multilabel-game-classifier.onrender.com)
+
+## Preview of the deployed webpage
+![webpage_demo](https://user-images.githubusercontent.com/52294804/219456382-1656158b-057b-48c5-84dd-791a93d46a71.jpg)
+
+
 
 ## Dataset Collection and Cleaning
 
