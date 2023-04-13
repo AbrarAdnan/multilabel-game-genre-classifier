@@ -9,19 +9,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <style>
-body {
-  display: flex;
-  justify-content: center;
-  font-family: Roboto, Arial, sans-serif;
-  font-size: 15px;
-  background-image: url("/static/images/seamless_bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: #333333;
-}
-    
+    @import url('https://fonts.cdnfonts.com/css/battlestar');
+    @import url('https://fonts.cdnfonts.com/css/games');
+    @import url('https://fonts.cdnfonts.com/css/methanerse-free-trial');
+    @import url('https://fonts.cdnfonts.com/css/aquire');
+    body {
+      display: flex;
+      justify-content: center;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 15px;
+      background-image: url("/static/images/seamless_bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      background-color: #333333;
+    }
+
 
     html {
       display: flex;
@@ -124,7 +128,7 @@ body {
 
     #intro {
       color: white;
-      font-family: "VT323", monospace;
+      font-family: 'Aquire', sans-serif;
     }
 
 
@@ -256,6 +260,183 @@ body {
         width: 10%;
       }
     }
+
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: border-box;
+    }
+
+    /* body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-color: #f9fafb;
+font-size: 70%;
+line-height: 1.4;
+font-family: "Inter", sans-serif;
+color: #6b7280;
+font-weight: 400;
+}
+
+@media only screen and (min-width: 600px) {
+body {
+justify-content: center;
+align-items: center;
+display: flex;
+height: 100vh;
+font-size: 100%;
+}
+} */
+
+    .popup-button {
+      appearance: none;
+      background: #16a34a;
+      border-radius: 0.25em;
+      color: white;
+      cursor: pointer;
+      display: inline;
+      font-weight: 500;
+      height: 3em;
+      line-height: 3em;
+      padding: 0 1em;
+    }
+
+    .popup-button:hover {
+      background-color: #17ac4e;
+    }
+
+    .popup-details-modal {
+      background: #ffffff;
+      border-radius: 0.5em;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      left: 50%;
+      max-width: 90%;
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30em;
+      text-align: left;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .popup-details-modal .popup-details-modal-close {
+      align-items: center;
+      color: #111827;
+      display: flex;
+      height: 4.5em;
+      justify-content: center;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4.5em;
+    }
+
+    .popup-details-modal .popup-details-modal-close svg {
+      display: block;
+    }
+
+    .popup-details-modal .popup-details-modal-title {
+      color: #111827;
+      padding: 1.5em 2em;
+      pointer-events: all;
+      position: relative;
+      width: calc(100% - 4.5em);
+    }
+
+    .popup-details-modal .popup-details-modal-title h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    .popup-details-modal .popup-details-modal-content {
+      border-top: 1px solid #e0e0e0;
+      padding: 2em;
+      pointer-events: all;
+      overflow: auto;
+      background-color: #111827;
+      font-size: medium;
+    }
+
+    .popup-details-modal-overlay {
+      transition: opacity 0.2s ease-out;
+      pointer-events: none;
+      background: rgba(15, 23, 42, 0.8);
+      position: fixed;
+      opacity: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      top: 0;
+    }
+
+    details[open] .popup-details-modal-overlay {
+      pointer-events: all;
+      opacity: 0.5;
+    }
+
+    details summary {
+      list-style: none;
+    }
+
+    details summary:focus {
+      outline: none;
+    }
+
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    code {
+      font-family: Monaco, monospace;
+      line-height: 100%;
+      background-color: #2d2d2c;
+      padding: 0.1em 0.4em;
+      letter-spacing: -0.05em;
+      word-break: normal;
+      border-radius: 7px;
+      color: white;
+      font-weight: normal;
+      font-size: 1.75rem;
+      position: relative;
+      top: -2px;
+    }
+
+    .popup-container {
+      text-align: center;
+      max-width: 40em;
+      padding: 2em;
+    }
+
+    .popup-container>h1 {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: normal;
+      color: #111827;
+    }
+
+    .popup-container>p {
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
+    .popup-container sup {
+      font-size: 1rem;
+      margin-left: 0.25em;
+      opacity: 0.5;
+      position: relative;
+    }
+    
   </style>
 
 </head>
@@ -263,33 +444,63 @@ body {
 <body>
   <form action="/" method="post" id="my-form" style="margin: 12px 50px 24px;">
 
-    <div class="formcontainer">
+    <div class="formcontainer" >
       <div class="container">
         <div style="text-align:center">
-          <div
-            style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:auto; margin: 12px 5%; max-width: 800px;">
-            <h2 id="intro" style="text-align:center; margin: 0;"><br><br>_ // Game Genre Classifier</h2>
-            <h4 id="intro" style="text-align:center; margin: 10px 0;">Made by: Abrar Faiaz Adnan <br>
-              Enter a description of a game and it'll predict the genre of the game. <br>This model can predict up to 74
-              labels <br>
-              <a id="intro" style="text-align:center; font-size: 16px; display:block; margin-top:10px;"
-                href="https://github.com/AbrarAdnan/multilabel-game-genre-classifier">Click here for more info</a>
+          <div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:auto; margin: 12px 5%; max-width: 1000px; font-family: 'Aquire', sans-serif;">
+            <h1 style="text-align:center; margin: 0;  color: #ffffff; font-size:30px; white-space:nowrap;"><br><br>_ // Game Genre Classifier \\ _</h1>
+            <h4 id="intro" style="text-align:center; font-family: 'Aquire', sans-serif; margin: 10px 0; font-size:20px;">Made by: Abrar Faiaz Adnan <br>
+              Enter a description of a game and it'll predict the genre of the game. <br>This model can predict up to
+              <details style="text-align:center; display: inline">
+                <summary>
+                  <div class="popup-button" style="display: inline;">
+                    74 labels
+                  </div>
+                  <div class="popup-details-modal-overlay"></div>
+                </summary>
+                <div class="popup-details-modal">
+                  <div class="popup-details-modal-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                        fill="black" />
+                    </svg>
+                  </div>
+                  <div class="popup-details-modal-title">
+                    <h1>The labels are</h1>
+                  </div>
+                  <div class="popup-details-modal-content">
+                    <p>
+                      Miscellaneous, Compilation, Action, General, Platformer, 2D, Simulation, Virtual, Virtual Life, Puzzle, Logic, Flight, Shooter, Shoot-'Em-Up, Combat, Vertical, Beat-'Em-Up, Driving, Racing, Arcade, Other, Automobile, Fighting, Horizontal, Board Games, Board / Card Game, Adventure, 3D, First-Person, Matching, Role-Playing, Japanese-Style, Vehicle, Roguelike, Action Adventure, Fantasy, Third-Person, Open-World, Sports, Individual, Strategy, Turn-Based, Tactics, Career, Visual Novel, Team, Soccer, Edutainment, Hidden Object, Party / Minigame, Sandbox, Sci-Fi, Tactical, Card Battle, Rhythm, Music, Real-Time, Defense, Top-Down, Light Gun, Action RPG, Historic, Management, Business / Tycoon, Survival, Civilian, Linear, Sim, Modern, Point-and-Click, Government, Massively Multiplayer, Text and Massively Multiplayer Online.
+                    </p>
+                  </div>
+                </div>
+              </details>
+          
+              <br>
+              <a id="intro" style="text-align:center; font-family: 'Aquire', sans-serif; font-size: 16px; display:block; margin-top:10px;"
+                href="https://github.com/AbrarAdnan/multilabel-game-genre-classifier" target="_blank">Click here for more info</a>
             </h4>
           </div>
+          
+          
+          
         </div>
-        <label for="text" id="intro"><strong>Enter Description:</strong></label>
+        <label for="text" id="intro" ><strong>Enter Description:</strong></label>
         <div id="notification" id="intro" style="display: none;">
           Please enter some text.
         </div>
 
+
+
         <br>
         <div id="notification" style="display: none;">Please enter some text.</div>
-        <textarea style="display:flex;justify-content:center;width:100%;box-sizing:border-box;padding:10px;margin:0;"
+        <textarea style="display:flex;justify-content:center;width:100%;box-sizing:border-box;padding:10px;margin:0; font-family: 'Aquire', sans-serif;"
           rows="4" cols="50" placeholder="Enter Game Description" name="text" id="my-textarea"
           required>{{ initial_text }}</textarea>
-        <div style="display:flex;justify-content:center;width:100%; margin-top:10px;">
+        <div style="display:flex;justify-content:center;width:100%; margin-top:10px; font-family: 'Aquire', sans-serif;">
           <button type="submit" class="btn-glitch-fill" id="submit-btn">
-            <span class="text">// Submit</span><span class="text-decoration">_</span>
+            <span class="text" style="font-family: 'Aquire', sans-serif;">// Submit</span><span class="text-decoration">_</span>
           </button>
         </div>
       </div>
@@ -317,8 +528,8 @@ body {
     {% endif %}
 
   </form>
-
   <script>
+
 
   </script>
 
