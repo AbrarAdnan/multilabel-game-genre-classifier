@@ -15,8 +15,8 @@
       font-family: Roboto, Arial, sans-serif;
       font-size: 15px;
       background-image: url("/static/images/seamless_bg.png");
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-repeat: repeat;
+      background-size: auto;
     }
 
     html {
@@ -27,7 +27,7 @@
     }
 
     textarea {
-      width: 100%;
+      width: 500px;
       height: 150px;
       padding: 12px 20px;
       box-sizing: border-box;
@@ -64,26 +64,18 @@
 
     h1 {
       text-align: center;
-      font-size: 25px;
+      font-size: 18;
     }
 
     h2 {
       text-align: center;
-      font-size: 20px;
+      font-size: 12;
     }
 
     .formcontainer {
       text-align: center;
       margin: 12px 50px 24px;
     }
-
-    /* .formcontainer {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
     .container {
       padding: 16px 0;
@@ -97,32 +89,12 @@
     }
 
     /* Change styles for span on extra small screens */
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 300px) {
       span.psw {
         display: block;
         float: none;
       }
-
-      .formcontainer {
-        margin: 12px 20px 24px;
-      }
     }
-
-    /* Change styles for textarea on small screens */
-    @media screen and (max-width: 768px) {
-      textarea {
-        width: 100%;
-      }
-    }
-
-    /* Change styles for form on large screens */
-    @media screen and (min-width: 1024px) {
-      form {
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    }
-
 
     @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
@@ -271,34 +243,31 @@
       <div class="container">
         <div style="text-align:center">
           <div
-            style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:auto; margin: 12px 5%; max-width: 800px;">
-            <h2 id="intro" style="text-align:center; margin: 0;"><br><br>_ // Game Genre Classifier</h2>
-            <h4 id="intro" style="text-align:center; margin: 10px 0;">Made by: Abrar Faiaz Adnan <br>
-              Enter a description of a game and it'll predict the genre of the game. <br>This model can predict up to 74
-              labels <br>
-              <a id="intro" style="text-align:center; font-size: 16px; display:block; margin-top:10px;"
-                href="https://github.com/AbrarAdnan/multilabel-game-genre-classifier">Click here for more info</a>
-            </h4>
+          style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:10vh; margin: 12px 50px 24px;">
+          <h2 id="intro" style="text-align:center;display:flex;justify-content:center; align-items:center"><br><br>_ // Game Genre Classifier</h2>
+          <h4 id="intro" style="text-align:center;">Made by: Abrar Faiaz Adnan <br>
+            Enter a description of a game and it'll predict the genre of the game. <br>This model can predict upto 74 labels <br><a id="intro"
+              style="text-align:center; font-size: 16px;"
+              href="https://github.com/AbrarAdnan/multilabel-game-genre-classifier">Click here for more info</a>
+        </div>
+          <label for="text" id="intro"><strong>Enter Description:</strong></label>
+          <div id="notification" id="intro" style="display: none;">
+            Please enter some text.
           </div>
         </div>
-        <label for="text" id="intro"><strong>Enter Description:</strong></label>
-        <div id="notification" id="intro" style="display: none;">
-          Please enter some text.
-        </div>
-
         <br>
+        <!-- <input type="text" placeholder="Enter Game Description" name="text" required> -->
         <div id="notification" style="display: none;">Please enter some text.</div>
-        <textarea style="display:flex;justify-content:center;width:100%;box-sizing:border-box;padding:10px;margin:0;"
-          rows="4" cols="50" placeholder="Enter Game Description" name="text" id="my-textarea"
+        <textarea style="display:flex;justify-content:center;width:100%;box-sizing:border-box;padding:10px;margin:0;" rows="4" cols="50" placeholder="Enter Game Description" name="text" id="my-textarea"
           required>{{ initial_text }}</textarea>
-        <div style="display:flex;justify-content:center;width:100%; margin-top:10px;">
+      </div>
+      
+          <div style="display:flex;justify-content:center;width:100%;">
           <button type="submit" class="btn-glitch-fill" id="submit-btn">
             <span class="text">// Submit</span><span class="text-decoration">_</span>
           </button>
-        </div>
       </div>
     </div>
-
 
     {% if show=='result' %}
     <div id="intro" style="text-align:center;margin:3vh;">
