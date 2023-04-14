@@ -1,0 +1,38 @@
+.my-link a {
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 #000, 
+                 1px -1px 0 #000, 
+                -1px 1px 0 #000, 
+                 1px 1px 0 #000;
+  }
+  
+  
+  .my-link a::before {
+    background: #16A34A;
+    content: "";
+    inset: -5px;
+    position: absolute;
+    transform: scaleX(0);
+    border-radius: 20px;
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .my-link a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Presentational styles 
+  body {
+    display: grid;
+    font-family: system-ui, sans;
+    font-size: 3.5rem;
+    font-weight: 800;
+    height: 100vh;
+    place-items: center;
+  }
+  
