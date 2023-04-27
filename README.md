@@ -9,7 +9,7 @@ Using this dataset was highly encouraged because games are a unique form of ente
 The model has been deployed to [Hugging Face Spaces](https://huggingface.co/), and its API is linked to a website deployed on [Render](https://render.com/). Check out the live demo [HERE](https://multilabel-game-classifier.onrender.com)
 
 ## Preview of the deployed webpage
-![webpage_demo](https://user-images.githubusercontent.com/52294804/219456382-1656158b-057b-48c5-84dd-791a93d46a71.jpg)
+![webpage_demo](https://user-images.githubusercontent.com/52294804/234868345-c36c0c47-2536-4854-9f60-7e57ca8339bb.png)
 
 
 
@@ -72,5 +72,5 @@ jupyter notebook
 
 # Note
 1. Data scraping takes a very long time.
-2. The pictures used on the render website were made using DALL-E-2
-3. Model training was done on colab. The rest of the code was run on local pc.
+2. The background picture used on the render website was made by Midjourney with the prompt "a cyberpunk background for photoshoot, HD, 32k --ar 3:2"
+3. Model training was done on colab. The rest of the code(website setup, data scraping, etc) was run on local pc.
