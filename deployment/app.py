@@ -23,7 +23,7 @@ def index():
         return render_template('index.html',show=False) 
 
 def predict_genres(input_text):
-    response = requests.post("https://abrar-adnan-game-classifier.hf.space/run/predict", json={
+    response = requests.post("https://abrar-adnan-multilabel-game-classifier.hf.space/run/predict", json={
 	"data": [
 		input_text
 	]}).json()
